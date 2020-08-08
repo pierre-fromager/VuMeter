@@ -1,0 +1,27 @@
+
+.hvmmask {
+    mask-repeat: repeat-x;
+}
+
+.peopleMask {
+    mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 20px;            
+}
+
+.circleMask {
+    mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
+    mask-repeat: repeat-x;
+}
+.circleMaskv {
+    mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
+    mask-repeat: repeat-y;
+}
+
+.ledMaskh {
+    mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/40px 10px;
+    mask-repeat: repeat-x;
+}
+
+.ledMaskv {
+    mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/10px 40px;
+    mask-repeat: repeat-y;
+}

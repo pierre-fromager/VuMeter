@@ -7,15 +7,42 @@
     <meta name="generator" content="Doxygen 1.8.14" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>VuMeter - Front component</title>
-    <link href="vm.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="vm.js"></script>
+    <link href="css/vm.css" rel="stylesheet" type="text/css" />
+    <link href="css/screw.css" rel="stylesheet" type="text/css" />
+    <link href="css/gradient.css" rel="stylesheet" type="text/css" />
+    <link href="css/mask.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/vm.js"></script>
 </head>
 
 <body>
     <h1>VuMeter demo</h1>
     <h2>Horizontal</h2>
-    <div id="vm1" class="vm hvm hvmg">
-        <div class="vmov hvmov" data-tooltip="">
+    <div id="vmhscrewed" class="gradientmetal">
+        <div class="screwgrid">
+            <div class="screwbox">
+                <div class="hexagon abscrew"></div>
+            </div>
+            <div class="screwbox">
+                <div class="hexagon abscrew"></div>
+            </div>
+            <div class="screwbox">
+                <div class="hexagon abscrew"></div>
+            </div>
+        </div>
+        <div id="vm1" class="vm hvm hvmg" style="margin:0 auto">
+            <div class="vmov hvmov" data-tooltip="">
+            </div>
+        </div>
+        <div class="screwgrid">
+            <div class="screwbox">
+                <div class="hexagon abscrew"></div>
+            </div>
+            <div class="screwbox">
+                <div class="hexagon abscrew"></div>
+            </div>
+            <div class="screwbox">
+                <div class="hexagon abscrew"></div>
+            </div>
         </div>
     </div>
     <div id="vm2" class="vm hvm hvmg circleMask">
