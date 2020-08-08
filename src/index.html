@@ -9,6 +9,7 @@
     <title>VuMeter - Front component</title>
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/vumeter.css" rel="stylesheet" type="text/css" />
+    <link href="css/board.css" rel="stylesheet" type="text/css" />
     <link href="css/screw.css" rel="stylesheet" type="text/css" />
     <link href="css/gradient.css" rel="stylesheet" type="text/css" />
     <link href="css/mask.css" rel="stylesheet" type="text/css" />
@@ -17,134 +18,142 @@
 
 <body>
     <h1>VuMeter demo</h1>
-    <h2>Horizontal raw</h2>
-    <div id="hvm1raw" class="vm hvm hvmg">
-        <div class="vmov hvmov" data-tooltip="">
+    <section>
+        <h2>Horizontal raw</h2>
+        <div id="vumh1raw" class="vum vumh gradienthdefault">
+            <div class="vumoverlay vumoverlayh" data-tooltip="">
+            </div>
         </div>
-    </div>
-    <p>Source code</p>
-    <pre>
-&lt;div id=&quot;hvm1raw&quot; class=&quot;vm hvm hvmg&quot;&gt;
-    &lt;div class=&quot;vmov hvmov&quot; data-tooltip=&quot;&quot;&gt;
+        <p class="sc">Source code</p>
+        <pre>
+&lt;div id=&quot;vumh1raw&quot; class=&quot;vum vumh gradienthdefault&quot;&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot; data-tooltip=&quot;&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;
     </pre>
-    <h2>Horizontal raw masked</h2>
-    <h3>Circle</h3>
-    <div id="hvm2raw" class="vm hvm hvmg circleMask">
-        <div class="vmov hvmov">
+    </section>
+    <section>
+        <h2>Horizontal raw masked</h2>
+        <h3>Circle</h3>
+        <div id="vumh2raw" class="vum vumh gradienthdefault circleMask">
+            <div class="vumoverlay vumoverlayh">
+            </div>
         </div>
-    </div>
-    <p>Source code</p>
-    <pre>
-&lt;div id=&quot;hvm3raw&quot; class=&quot;vm hvm hvmg circleMask&quot;&gt;
-    &lt;div class=&quot;vmov hvmov&quot;&gt;
+        <p class="sc">Source code</p>
+        <pre>
+&lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthdefault circleMask&quot;&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;
     </pre>
-    <h3>People</h3>
-    <div id="hvm3raw" class="vm hvm hvmgtron peopleMask">
-        <div class="vmov hvmov">
+        <h3>People</h3>
+        <div id="vumh3raw" class="vum vumh gradienthtron peopleMask">
+            <div class="vumoverlay vumoverlayh">
+            </div>
         </div>
-    </div>
-    <p>Source code</p>
-    <pre>
-&lt;div id=&quot;hvm3raw&quot; class=&quot;vm hvm hvmgtron peopleMask&quot;&gt;
-    &lt;div class=&quot;vmov hvmov&quot;&gt;
+        <p class="sc">Source code</p>
+        <pre>
+&lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthtron peopleMask&quot;&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;
     </pre>
-    <h3>Led</h3>
-    <div id="hvm4raw" class="vm hvm hvmg ledMaskh">
-        <div class="vmov hvmov">
+        <h3>Led</h3>
+        <div id="vumh4raw" class="vum vumh gradienthdefault ledMaskh">
+            <div class="vumoverlay vumoverlayh">
+            </div>
         </div>
-    </div>
-    <p>Source code</p>
-    <pre>
-&lt;div id=&quot;hvm4raw&quot; class=&quot;vm hvm hvmg ledMaskh&quot;&gt;
-    &lt;div class=&quot;vmov hvmov&quot;&gt;
+        <p class="sc">Source code</p>
+        <pre>
+&lt;div id=&quot;vumh4raw&quot; class=&quot;vum vumh gradienthdefault ledMaskh&quot;&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;
     </pre>
-    <h2>Horizontal boarded</h2>
-    <div id="vmhscrewed" class="gradientmetal">
-        <div class="screwgrid">
-            <div class="screwbox">
-                <div class="hexagon abscrew"></div>
+    </section>
+    <section>
+        <h2>Horizontal boarded</h2>
+        <div class="board gradientmetal">
+            <div class="screwgridh">
+                <div class="screwbox">
+                    <div class="hexagon screwcenter"></div>
+                </div>
+                <div class="screwbox">
+                    <div class="hexagon screwcenter"></div>
+                </div>
+                <div class="screwbox">
+                    <div class="hexagon screwcenter"></div>
+                </div>
             </div>
-            <div class="screwbox">
-                <div class="hexagon abscrew"></div>
+            <div id="vumhboarded1" class="vum vumh gradienthdefault">
+                <div class="vumoverlay vumoverlayh" data-tooltip="">
+                </div>
             </div>
-            <div class="screwbox">
-                <div class="hexagon abscrew"></div>
+            <div class="screwgridh">
+                <div class="screwbox">
+                    <div class="hexagon screwcenter"></div>
+                </div>
+                <div class="screwbox">
+                    <div class="hexagon screwcenter"></div>
+                </div>
+                <div class="screwbox">
+                    <div class="hexagon screwcenter"></div>
+                </div>
             </div>
         </div>
-        <div id="hvmboarded1" class="vm hvm hvmg" style="margin:0 auto">
-            <div class="vmov hvmov" data-tooltip="">
-            </div>
-        </div>
-        <div class="screwgrid">
-            <div class="screwbox">
-                <div class="hexagon abscrew"></div>
-            </div>
-            <div class="screwbox">
-                <div class="hexagon abscrew"></div>
-            </div>
-            <div class="screwbox">
-                <div class="hexagon abscrew"></div>
-            </div>
-        </div>
-    </div>
-    <p>Source code</p>
-    <pre>
-&lt;div id=&quot;vmhscrewed&quot; class=&quot;gradientmetal&quot;&gt;
-    &lt;div class=&quot;screwgrid&quot;&gt;
+        <p class="sc">Source code</p>
+        <pre>
+&lt;div class=&quot;board gradientmetal&quot;&gt;
+    &lt;div class=&quot;screwgridh&quot;&gt;
         &lt;div class=&quot;screwbox&quot;&gt;
-            &lt;div class=&quot;hexagon abscrew&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;screwbox&quot;&gt;
-            &lt;div class=&quot;hexagon abscrew&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;screwbox&quot;&gt;
-            &lt;div class=&quot;hexagon abscrew&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div id=&quot;hvmboarded1&quot; class=&quot;vm hvm hvmg&quot; style=&quot;margin:0 auto&quot;&gt;
-        &lt;div class=&quot;vmov hvmov&quot; data-tooltip=&quot;&quot;&gt;
+    &lt;div id=&quot;vumhboarded1&quot; class=&quot;vum vumh gradienthdefault&quot;&gt;
+        &lt;div class=&quot;vumoverlay vumoverlayh&quot; data-tooltip=&quot;&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;screwgrid&quot;&gt;
+    &lt;div class=&quot;screwgridh&quot;&gt;
         &lt;div class=&quot;screwbox&quot;&gt;
-            &lt;div class=&quot;hexagon abscrew&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;screwbox&quot;&gt;
-            &lt;div class=&quot;hexagon abscrew&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;screwbox&quot;&gt;
-            &lt;div class=&quot;hexagon abscrew&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
     </pre>
-    <h2>Vertical raw</h2>
-    <div id="vvm1" class="vm vvm vvmg">
-        <div class="vmov vvmov" data-tooltip="">
+    </section>
+    <section>
+        <h2>Vertical raw</h2>
+        <div id="vumv1" class="vum vumv gradientvdefault">
+            <div class="vumoverlay vumoverlayv" data-tooltip="">
+            </div>
         </div>
-    </div>
-    <div id="vvm2" class="vm vvm vvmg circleMaskv">
-        <div class="vmov vvmov">
+        <div id="vumv2" class="vum vumv gradientvdefault circleMaskv">
+            <div class="vumoverlay vumoverlayv">
+            </div>
         </div>
-    </div>
-    <div id="vvm3" class="vm vvm vvmgtron">
-        <div class="vmov vvmov">
+        <div id="vumv3" class="vum vumv gradientvtron">
+            <div class="vumoverlay vumoverlayv">
+            </div>
         </div>
-    </div>
-    <div id="vvm4" class="vm vvm vvmgwire ledMaskv" data-tooltip="">
-        <div class="vmov vvmov">
+        <div id="vumv4" class="vum vumv gradientvwire ledMaskv" data-tooltip="">
+            <div class="vumoverlay vumoverlayv">
+            </div>
         </div>
-    </div>
+    </section>
     <script>
-        const iid = window.setInterval(updateAllVms, 600);
+        const iid = window.setInterval(updateAllvums, 600);
     </script>
 </body>
 

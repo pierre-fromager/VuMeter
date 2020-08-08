@@ -1,35 +1,35 @@
-.vm {
+.vum {
   position: relative;
   border: darkgray solid 1px;
   color: darkgray;
   border-style: inset;
 }
 
-.vmov {
+.vumoverlay {
   position: absolute;
   right: 0;
   background-color: lightgray;
 }
 
-.hvm {
-  width: 40em;
+.vumh {
+  width: 20em;
   height: 2em;
   margin: 0.2em;
 }
 
-.hvmov {
+.vumoverlayh {
   height: 100%;
   transition: width 600ms ease-in-out;
 }
 
-.vvm {
+.vumv {
   width: 2.5em;
-  height: 40em;
+  height: 20em;
   margin: 0.2em 0.2em;
   float: left;
 }
 
-.vvmov {
+.vumoverlayv {
   width: 100%;
   transition: height 600ms ease-in-out;
 }

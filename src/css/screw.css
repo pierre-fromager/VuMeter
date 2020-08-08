@@ -2,7 +2,6 @@
   position: relative;
   width: 12px;
   height: 7px;
-  background-color: black;
   background-color: #5b6467;
   background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
   margin: 3.5px 0;
@@ -33,19 +32,11 @@
   border-top: 3.5px solid darkgrey;
 }
 
-.abscrew {
+.screwcenter {
   margin: 0 auto;
 }
 
-#vmhscrewed {
-  display: block;
-  width: 42em;
-  height: 5em;
-  padding: 0.2em 0.2em 0.2em 0.2em;
-  box-shadow: 0px 2px 18px -4px rgba(0, 0, 0, 0.5);
-}
-
-.screwgrid {
+.screwgridh {
   margin-top: 0.5em;
   display: flex;
 }
@@ -63,4 +54,3 @@
 .screwbox:nth-child(3) {
   width: 2%;
 }
-
