@@ -21,24 +21,25 @@
     <h1>VuMeter demo</h1>
 
     <div class="controlcontainer">
-        <button id="vumDemoToggle" onclick="toggleDemo(this)">Stop</button>
-        <div class="rangewrap">
-            <input id="vumDemoTimerInterval" onchange="changeDemoTimerInterval(this)" type="range" min="200" max="1000"
-                step="100" value="200" class=" range">
-            <output class="bubble"></output>
-        </div>
+        <fieldset>
+            <legend>Controls</legend>
+            <input type="button" id="vumDemoToggle" onclick="toggleDemo(this)" value="Stop">
+            <div class="rangewrap">
+                <input id="vumDemoTimerInterval" onchange="changeDemoTimerInterval(this)" type="range" min="200"
+                    max="1000" step="100" value="200" class=" range">
+                <output class="bubble"></output>
+            </div>
+        </fieldset>
     </div>
     <section>
         <h2>Horizontal raw</h2>
         <div id="vumh1raw" class="vum vumh gradienthdefault">
-            <div class="vumoverlay vumoverlayh" data-tooltip="">
-            </div>
+            <div class="vumoverlay vumoverlayh" data-tooltip=""></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
 &lt;div id=&quot;vumh1raw&quot; class=&quot;vum vumh gradienthdefault&quot;&gt;
-    &lt;div class=&quot;vumoverlay vumoverlayh&quot; data-tooltip=&quot;&quot;&gt;
-    &lt;/div&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot; data-tooltip=&quot;&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
     </section>
@@ -46,38 +47,32 @@
         <h2>Horizontal raw masked</h2>
         <h3>Circle</h3>
         <div id="vumh2raw" class="vum vumh gradienthdefault maskcircleh">
-            <div class="vumoverlay vumoverlayh">
-            </div>
+            <div class="vumoverlay vumoverlayh"></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
 &lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthdefault circleMask&quot;&gt;
-    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;
-    &lt;/div&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
         <h3>People</h3>
         <div id="vumh3raw" class="vum vumh gradienthtron maskpeople">
-            <div class="vumoverlay vumoverlayh">
-            </div>
+            <div class="vumoverlay vumoverlayh"></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
 &lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthtron maskpeople&quot;&gt;
-    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;
-    &lt;/div&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
         <h3>Led</h3>
         <div id="vumh4raw" class="vum vumh gradienthdefault ledMaskh">
-            <div class="vumoverlay vumoverlayh">
-            </div>
+            <div class="vumoverlay vumoverlayh"></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
 &lt;div id=&quot;vumh4raw&quot; class=&quot;vum vumh gradienthdefault ledMaskh&quot;&gt;
-    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;
-    &lt;/div&gt;
+    &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
     </section>
@@ -96,8 +91,7 @@
                 </div>
             </div>
             <div id="vumhboarded1" class="vum vumh gradienthdefault">
-                <div class="vumoverlay vumoverlayh" data-tooltip="">
-                </div>
+                <div class="vumoverlay vumoverlayh" data-tooltip=""></div>
             </div>
             <div class="screwgridh">
                 <div class="screwbox">
@@ -126,8 +120,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div id=&quot;vumhboarded1&quot; class=&quot;vum vumh gradienthdefault&quot;&gt;
-        &lt;div class=&quot;vumoverlay vumoverlayh&quot; data-tooltip=&quot;&quot;&gt;
-        &lt;/div&gt;
+        &lt;div class=&quot;vumoverlay vumoverlayh&quot; data-tooltip=&quot;&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;screwgridh&quot;&gt;
         &lt;div class=&quot;screwbox&quot;&gt;

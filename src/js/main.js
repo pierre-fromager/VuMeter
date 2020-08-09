@@ -34,7 +34,7 @@ const stopDemo = () => {
 const toggleDemo = (eltprox) => {
     if (undefined !== eltprox.id) {
         const ran = runningDemo();
-        document.getElementById(eltprox.id).innerHTML = (ran)
+        document.getElementById(eltprox.id).value = (ran)
             ? 'Start'
             : 'Stop';
         if (ran) {
