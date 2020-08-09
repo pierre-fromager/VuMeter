@@ -14,10 +14,20 @@
     <link href="css/gradient.css" rel="stylesheet" type="text/css" />
     <link href="css/mask.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/vumeter.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
     <h1>VuMeter demo</h1>
+
+    <div class="controlcontainer">
+        <button id="vumDemoToggle" onclick="toggleDemo(this)">Stop</button>
+        <div class="rangewrap">
+            <input id="vumDemoTimerInterval" onchange="changeDemoTimerInterval(this)" type="range" min="200" max="1000"
+                step="100" value="200" class=" range">
+            <output class="bubble"></output>
+        </div>
+    </div>
     <section>
         <h2>Horizontal raw</h2>
         <div id="vumh1raw" class="vum vumh gradienthdefault">
@@ -35,7 +45,7 @@
     <section>
         <h2>Horizontal raw masked</h2>
         <h3>Circle</h3>
-        <div id="vumh2raw" class="vum vumh gradienthdefault circleMask">
+        <div id="vumh2raw" class="vum vumh gradienthdefault maskcircleh">
             <div class="vumoverlay vumoverlayh">
             </div>
         </div>
@@ -47,13 +57,13 @@
 &lt;/div&gt;
     </pre>
         <h3>People</h3>
-        <div id="vumh3raw" class="vum vumh gradienthtron peopleMask">
+        <div id="vumh3raw" class="vum vumh gradienthtron maskpeople">
             <div class="vumoverlay vumoverlayh">
             </div>
         </div>
         <p class="sc">Source code</p>
         <pre>
-&lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthtron peopleMask&quot;&gt;
+&lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthtron maskpeople&quot;&gt;
     &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -153,7 +163,7 @@
         </div>
     </section>
     <script>
-        const iid = window.setInterval(updateAllvum, 600);
+        startDemo();
     </script>
 </body>
 

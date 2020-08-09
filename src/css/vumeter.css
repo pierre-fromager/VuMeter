@@ -19,7 +19,7 @@
 
 .vumoverlayh {
   height: 100%;
-  transition: width 600ms ease-in-out;
+  transition: width 200ms ease-in-out;
 }
 
 .vumv {
@@ -31,7 +31,7 @@
 
 .vumoverlayv {
   width: 100%;
-  transition: height 600ms ease-in-out;
+  transition: height 200ms ease-in-out;
 }
 
 [data-tooltip]:after {

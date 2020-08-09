@@ -34,3 +34,36 @@ p.sc {
   text-align: center;
   border-radius: 1em 1em 0 0;
 }
+
+.rangewrap {
+  position: relative;
+  width:100%;
+}
+.range {
+  width: 100%;
+}
+.bubble {
+  background-color: darkgray;
+  color: black;
+  padding: 4px 12px;
+  position: absolute;
+  border-radius: 4px;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: darkgray;
+  top: -0.4em;
+  left: 1.4em;
+}
+
+.controlcontainer{
+  width: 50%;
+}
+
+#vumDemoToggle{
+  width: 100%;
+}

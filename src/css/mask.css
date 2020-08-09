@@ -1,13 +1,11 @@
 
-.hvmmask {
-    mask-repeat: repeat-x;
-}
 
-.peopleMask {
+
+.maskpeople {
     mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 20px;            
 }
 
-.circleMask {
+.maskcircleh {
     mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
     mask-repeat: repeat-x;
 }
