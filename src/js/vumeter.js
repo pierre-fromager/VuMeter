@@ -3,10 +3,10 @@ const vumHorizClassname = '.vumh';
 const vumHorizOvlClassname = '.vumoverlayh';
 const vumVertClassname = '.vumv';
 const vumVertOvlClassname = '.vumoverlayv';
-const selVms = (sel) => document.querySelectorAll(sel);
-const selOv = (id, sel) => document.getElementById(id).querySelector(sel);
+const getVms = (sel) => document.querySelectorAll(sel);
+const getOverlay = (id, sel) => document.getElementById(id).querySelector(sel);
 const setVmValue = (id, sel, vpc) => {
-    const ov = selOv(id, sel);
+    const ov = getOverlay(id, sel);
     const vpcf = (100 - vpc) + '%';
     if (ov.hasAttribute(tooltipAttr)) {
         ov.setAttribute(tooltipAttr, vpc + '%');
@@ -18,11 +18,13 @@ const setVmValue = (id, sel, vpc) => {
     }
 }
 const rpct = divisor => Math.floor(((Math.random() * 100) + 1) / divisor);
-const updateAllvums = () => {
-    selVms(vumHorizClassname).forEach(element => {
-        setVmValue(element.id, vumHorizOvlClassname, rpct(1))
-    });
-    selVms(vumVertClassname).forEach(element => {
-        setVmValue(element.id, vumVertOvlClassname, rpct(1))
-    });
+const updateAllvum = () => {
+    const allHorizVum = getVms(vumHorizClassname);
+    for (element of allHorizVum) {
+        setVmValue(element.id, vumHorizOvlClassname, rpct(1));
+    }
+    const allVertVum = getVms(vumVertClassname);
+    for (element of allVertVum) {
+        setVmValue(element.id, vumVertOvlClassname, rpct(1));
+    }
 }
