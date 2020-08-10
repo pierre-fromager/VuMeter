@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     allRanges.forEach(wrap => {
         const range = wrap.querySelector(rangeClassSelector);
         const bubble = wrap.querySelector(bubbleClassSelector);
-        range.addEventListener("input", () => {
+        range.addEventListener('input', () => {
             setBubble(range, bubble);
         });
         setBubble(range, bubble);
