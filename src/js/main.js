@@ -1,4 +1,8 @@
 
+const rangeWrapClassSelector = '.rangewrap';
+const rangeClassSelector = '.range';
+const bubbleClassSelector = '.bubble';
+
 let vumDemoTimer = undefined;
 let vumDemoTimerInterval = 600;
 
@@ -54,15 +58,14 @@ const setBubble = (range, bubble) => {
     bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.6}px))`;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const allRanges = document.querySelectorAll('.rangewrap');
+document.addEventListener('DOMContentLoaded', () => {
+    const allRanges = document.querySelectorAll(rangeWrapClassSelector);
     allRanges.forEach(wrap => {
-        const range = wrap.querySelector(".range");
-        const bubble = wrap.querySelector(".bubble");
+        const range = wrap.querySelector(rangeClassSelector);
+        const bubble = wrap.querySelector(bubbleClassSelector);
         range.addEventListener("input", () => {
             setBubble(range, bubble);
         });
         setBubble(range, bubble);
     });
 });
-
