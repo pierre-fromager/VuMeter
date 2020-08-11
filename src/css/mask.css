@@ -1,25 +1,22 @@
-
-
-
 .maskpeople {
-    mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 20px;            
+  mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 20px;
 }
 
 .maskcircleh {
-    mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
-    mask-repeat: repeat-x;
+  mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
+  mask-repeat: repeat-x;
 }
 .maskcirclev {
-    mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
-    mask-repeat: repeat-y;
+  mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
+  mask-repeat: repeat-y;
 }
 
 .maskledh {
-    mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/40px 10px;
-    mask-repeat: repeat-x;
+  mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/40px 10px;
+  mask-repeat: repeat-x;
 }
 
 .maskledv {
-    mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/10px 40px;
-    mask-repeat: repeat-y;
+  mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/10px 40px;
+  mask-repeat: repeat-y;
 }

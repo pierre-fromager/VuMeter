@@ -90,3 +90,12 @@ input[type="button"] {
 #vumDemoToggle {
   width: 100%;
 }
+
+#boardedh1 {
+  margin: 0 auto;
+  height: 30%;
+}
+
+#boardedv1 {
+  width: 0.7em;
+}

@@ -34,6 +34,12 @@
   transition: height 200ms ease-in-out;
 }
 
+.vumlabelh {
+  display: inline-table;
+  position: absolute;
+  z-index: 10;
+}
+
 [data-tooltip]:after {
   position: absolute;
   right: 0.2em;
