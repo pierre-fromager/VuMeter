@@ -9,17 +9,17 @@
     mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
     mask-repeat: repeat-x;
 }
-.circleMaskv {
+.maskcirclev {
     mask: radial-gradient(10px, #fff 100%, transparent 100%) 0 0/40px 40px;
     mask-repeat: repeat-y;
 }
 
-.ledMaskh {
+.maskledh {
     mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/40px 10px;
     mask-repeat: repeat-x;
 }
 
-.ledMaskv {
+.maskledv {
     mask: radial-gradient(15px, #fff 100%, transparent 100%) 0 0/10px 40px;
     mask-repeat: repeat-y;
 }

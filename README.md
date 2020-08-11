@@ -20,7 +20,9 @@ No assets required nor external dependencies, just 30 lines of procedural vanill
 
 ### Boarded
 
-![VuMeter Horizontal Boarded](doc/img/boarded.gif)
+#### Horizontal
+
+![VuMeter Horizontal Boarded](doc/img/boardedh.gif)
 
 ``` html
  <div class="board gradientmetal">
@@ -47,6 +49,40 @@ No assets required nor external dependencies, just 30 lines of procedural vanill
         </div>
         <div class="screwbox">
             <div class="hexagon screwcenter"></div>
+        </div>
+    </div>
+</div>
+```
+
+#### Vertical
+
+![VuMeter Vertical Boarded](doc/img/boardedv.gif)
+
+``` html
+<div class="board boardv gradientmetal">
+    <div class="screwgridv">
+        <div class="screwboxv">
+            <div class="hexagon"></div>
+        </div>
+        <div class="screwboxv">
+            <div class="hexagon"></div>
+        </div>
+        <div class="screwboxv">
+            <div class="hexagon"></div>
+        </div>
+    </div>
+    <div id="boardedv1" class="vum vumv gradientvdefault maskledv" style="width:.7em">
+        <div class="vumoverlay vumoverlayv"></div>
+    </div>
+    <div class="screwgridv">
+        <div class="screwboxv">
+            <div class="hexagon"></div>
+        </div>
+        <div class="screwboxv">
+            <div class="hexagon"></div>
+        </div>
+        <div class="screwboxv">
+            <div class="hexagon"></div>
         </div>
     </div>
 </div>

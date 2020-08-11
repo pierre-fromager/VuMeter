@@ -39,18 +39,47 @@
 .screwgridh {
   margin-top: 0.5em;
   display: flex;
+  flex-direction: row;
 }
 
-.screwbox {
+.screwboxh {
   height: 1em;
 }
 
-.screwbox:nth-child(1) {
+.screwboxh:nth-child(1) {
   width: 2%;
 }
-.screwbox:nth-child(2) {
+
+.screwboxh:nth-child(2) {
   width: 96%;
 }
-.screwbox:nth-child(3) {
+
+.screwboxh:nth-child(3) {
   width: 2%;
+}
+
+.screwgridv {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  flex-wrap: wrap;
+}
+
+.screwboxv {
+  align-content: left;
+  align-items: left;
+  justify-items: left;
+  width: inherit;
+}
+
+.screwboxv:nth-child(1) {
+  height: 45%;
+}
+
+.screwboxv:nth-child(2) {
+  height: 50%;
+}
+
+.screwboxv:nth-child(3) {
+  height: 5%;
 }

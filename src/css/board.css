@@ -1,11 +1,23 @@
 .board {
-  display: block;
-  width: 21em;
-  height: 5em;
-  padding: 0.2em 0.2em 0.2em 0.2em;
+  display: block;  
   box-shadow: 0px 2px 18px -4px rgba(0, 0, 0, 0.5);
+  
 }
 
-#hvmboarded1 {
+.boardh {
+  width: 21em;
+  height: 5em;  
+  padding: 0.2em 0.2em 0.2em 0.2em;
+}
+
+.boardv {
+  height: 21em;
+  width: max-content;
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  display:flex;
+  flex-direction:row;
+}
+
+#boardedh1 {
   margin: 0 auto;
 }
