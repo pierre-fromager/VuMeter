@@ -106,7 +106,7 @@ A sample screew can be found in [screew.css](src/css/screew.css).
 
 ## Usage
 
-Clone or download this repo then open index.html into your web browser.  
+Clone or download this repo then open [index.html](src/index.html) into your web browser.  
 To package and use in your own project, peek css sheet code then include [vumeter.js](src/js/vumeter.js).
 
 ## Todo
