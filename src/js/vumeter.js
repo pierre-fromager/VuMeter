@@ -27,4 +27,6 @@ const updateAllvum = () => {
     for (element of allVertVum) {
         setVmValue(element.id, vumVertOvlClassname, rpct(1));
     }
+    const vumcomp = document.getElementById('vu-meter');
+    vumcomp.setAttribute('value', rpct(1));
 }

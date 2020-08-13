@@ -109,6 +109,20 @@ A sample screew can be found in [screew.css](src/css/screew.css).
 Clone or download this repo then open [index.html](src/index.html) into your web browser.  
 To package and use in your own project, peek css sheet code then include [vumeter.js](src/js/vumeter.js).
 
+## Extra
+
+You can also use the custom element [vu-meter](src/components/vumcomponent.ts).
+
+``` html
+<vu-meter 
+    id="vu-meter" 
+    data-direction="horizontal" 
+    data-gradient="gradienthdefault" 
+    value="75"
+/>
+```
+To compile it, run tsc from command line, it will build the [vumcomponent.js](src/js/vumcomponent.js).
+
 ## Todo
 
 ### Features

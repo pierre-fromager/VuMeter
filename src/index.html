@@ -14,6 +14,7 @@
     <link href="css/gradient.css" rel="stylesheet" type="text/css" />
     <link href="css/mask.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/vumeter.js"></script>
+    <script type="text/javascript" src="js/vumcomponent.js" defer></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -33,12 +34,12 @@
     </div>
     <section>
         <h2>Horizontal raw</h2>
-        <div id="vumh1raw" class="vum vumh gradienthdefault">
+        <div id="vumhraw1" class="vum vumh gradienthdefault">
             <div class="vumoverlay vumoverlayh" data-tooltip=""></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
-&lt;div id=&quot;vumh1raw&quot; class=&quot;vum vumh gradienthdefault&quot;&gt;
+&lt;div id=&quot;vumhraw1&quot; class=&quot;vum vumh gradienthdefault&quot;&gt;
     &lt;div class=&quot;vumoverlay vumoverlayh&quot; data-tooltip=&quot;&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
@@ -46,32 +47,32 @@
     <section>
         <h2>Horizontal raw masked</h2>
         <h3>Circle</h3>
-        <div id="vumh2raw" class="vum vumh gradienthdefault maskcircleh">
+        <div id="vumhraw2" class="vum vumh gradienthdefault maskcircleh">
             <div class="vumoverlay vumoverlayh"></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
-&lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthdefault circleMask&quot;&gt;
+&lt;div id=&quot;vumhraw2&quot; class=&quot;vum vumh gradienthdefault circleMask&quot;&gt;
     &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
         <h3>People</h3>
-        <div id="vumh3raw" class="vum vumh gradienthtron maskpeople">
+        <div id="vumhraw3" class="vum vumh gradienthtron maskpeople">
             <div class="vumoverlay vumoverlayh"></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
-&lt;div id=&quot;vumh3raw&quot; class=&quot;vum vumh gradienthtron maskpeople&quot;&gt;
+&lt;div id=&quot;vumhraw3&quot; class=&quot;vum vumh gradienthtron maskpeople&quot;&gt;
     &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
         <h3>Led</h3>
-        <div id="vumh4raw" class="vum vumh gradienthdefault maskledh">
+        <div id="vumhraw4" class="vum vumh gradienthdefault maskledh">
             <div class="vumoverlay vumoverlayh"></div>
         </div>
         <p class="sc">Source code</p>
         <pre>
-&lt;div id=&quot;vumh4raw&quot; class=&quot;vum vumh gradienthdefault maskledh&quot;&gt;
+&lt;div id=&quot;vumhraw4&quot; class=&quot;vum vumh gradienthdefault maskledh&quot;&gt;
     &lt;div class=&quot;vumoverlay vumoverlayh&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
     </pre>
@@ -116,10 +117,8 @@
         &lt;div class=&quot;screwboxh&quot;&gt;
             &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
-
         &lt;div class=&quot;screwboxh&quot;&gt;
             &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
-
         &lt;/div&gt;
         &lt;div class=&quot;screwboxh&quot;&gt;
             &lt;div class=&quot;hexagon screwcenter&quot;&gt;&lt;/div&gt;
@@ -165,9 +164,7 @@
                 </div>
             </div>
         </div>
-
         <h2>Vertical boarded</h2>
-
         <div class="board boardv gradientmetal">
             <div class="screwgridv">
                 <div class="screwboxv">
@@ -226,11 +223,24 @@
     &lt;/div&gt;
 &lt;/div&gt;            
         </pre>
-
-
+    </section>
+    <section>
+        <h2>Web component</h2>
+        <div style="overflow: auto;">
+            <vu-meter id="vu-meter" data-direction="horizontal" data-gradient="gradienthdefault" value="75" />
+        </div>
+        <p class="sc">Source code</p>
+        <pre>
+&lt;vu-meter 
+    id=&quot;vum-web-comp&quot; 
+    data-direction=&quot;horizontal&quot; 
+    data-gradient=&quot;gradienthdefault&quot; 
+    value=&quot;75&quot;
+/&gt;
+        </pre>
     </section>
     <script>
-        startDemo();
+        startDemo();        
     </script>
 </body>
 
