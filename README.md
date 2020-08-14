@@ -116,8 +116,8 @@ You can also use the custom element [vu-meter](src/components/vumcomponent.ts).
 ``` html
 <vu-meter 
     id="vu-meter" 
-    data-direction="horizontal" 
-    data-gradient="gradienthdefault" 
+    direction="horizontal" 
+    gradient="default" 
     value="75"
 />
 ```
