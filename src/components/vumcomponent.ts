@@ -14,10 +14,22 @@ enum VumOvlDirClasses {
   vert = 'vumoverlayv',
 }
 
+enum VumGradients {
+  default = 'default',
+  tron = 'tron',
+}
+
+enum VumGradientClasses {
+  defaulth = 'gradienthdefault',
+  defaultv = 'gradientvdefault',
+  tronh = 'gradienthtron',
+  tronv = 'gradientvtron',
+}
+
 enum VumAttrInputs {
-  direction = 'data-direction',
-  gradient = 'data-gradient',
-  mask = 'data-mask',
+  direction = 'direction',
+  gradient = 'gradient',
+  mask = 'mask',
   value = 'value'
 }
 
@@ -42,8 +54,8 @@ class VuMeterComponent extends HTMLElement {
   private gradient: string;
   private mask: string;
   private value: number;
-  private vumClassname: string;
-  private overlayClassname: string;
+  private vumClass: string;
+  private overlayClass: string;
   private isFirstChange: boolean;
   private overlayElt: HTMLElement;
   private vumeterElt: HTMLElement;
@@ -53,7 +65,7 @@ class VuMeterComponent extends HTMLElement {
   }
 
   static get observedAttributes(): Array<string> {
-    return ['data-direction', 'data-gradient', 'data-mask', 'value'];
+    return ['direction', 'gradient', 'mask', 'value'];
   }
 
   attributeChangedCallback(name: string, oldValue: string, newValue: string) {
@@ -100,8 +112,8 @@ class VuMeterComponent extends HTMLElement {
 
   private init() {
     this.isFirstChange = true;
-    this.vumClassname = 'vum';
-    this.overlayClassname = 'vumoverlay';
+    this.vumClass = 'vum';
+    this.overlayClass = 'vumoverlay';
   }
 
   private build() {
@@ -119,13 +131,38 @@ class VuMeterComponent extends HTMLElement {
     return `${(100 - this.value)}%`;
   }
 
-  private get overlayDirectionClassname(): string {
+  private get overlayDirectionClass(): string {
     return (this.direction === VumDirections.horiz)
       ? VumOvlDirClasses.horiz
       : VumOvlDirClasses.vert;
   }
 
-  private get vumDirectionClassname(): string {
+  private get gradientClass(): string {
+    let gradientClass: string;
+    const isHoriz = this.direction === VumDirections.horiz;
+    switch (this.gradient) {
+      case VumGradients.default:
+          gradientClass = (isHoriz)
+          ? VumGradientClasses.defaulth
+          : VumGradientClasses.defaultv;
+        break;
+
+      case VumGradients.tron:
+          gradientClass = (isHoriz)
+          ? VumGradientClasses.tronh
+          : VumGradientClasses.tronv;
+        break;
+
+      default:
+          gradientClass = (isHoriz)
+          ? VumGradientClasses.defaulth
+          : VumGradientClasses.defaultv;
+        break;
+    }
+    return gradientClass;
+  }
+
+  private get vumDirectionClass(): string {
     return (this.direction === VumDirections.horiz)
       ? VumDirClasses.horiz
       : VumDirClasses.vert;
@@ -139,7 +176,7 @@ class VuMeterComponent extends HTMLElement {
   private applyVumeterChanges() {
     this.vumeterElt.setAttribute(
       'class',
-      `${this.vumClassname} ${this.vumDirectionClassname} ${this.gradient} ${this.mask}`
+      `${this.vumClass} ${this.vumDirectionClass} ${this.gradientClass} ${this.mask}`
     );
   }
 
@@ -157,7 +194,7 @@ class VuMeterComponent extends HTMLElement {
   private applyOverlayChanges() {
     this.overlayElt.setAttribute(
       'class',
-      `${this.overlayClassname} ${this.overlayDirectionClassname}`
+      `${this.overlayClass} ${this.overlayDirectionClass}`
     );
     if (this.direction === VumDirections.horiz) {
       this.overlayElt.style.width = this.vpct;

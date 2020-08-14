@@ -1,22 +1,21 @@
-.gradientmetal {
-  background-color: #5b6467;
-  background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
-}
-
 .gradienthdefault {
   background-image: linear-gradient(to right, green 20%, lime 50%, orange 60%, red 100%);
-}
-
-.gradienthtron {
-  background-image: linear-gradient(to right, #c6ffdd 20%, #fbd786 60%, #f64f59 100%);
 }
 
 .gradientvdefault {
   background-image: linear-gradient(to top, green 20%, lime 50%, orange 60%, red 100%);
 }
 
+.gradienthtron {
+  background-image: linear-gradient(to right, #c6ffdd 20%, #fbd786 60%, #f64f59 100%);
+}
+
 .gradientvtron {
   background-image: linear-gradient(to top, #c6ffdd 20%, #fbd786 60%, #f64f59 100%);
+}
+
+.gradienthwire {
+  background-image: linear-gradient(to right, #8a2387 20%, #e94057 60%, #f27121 100%);
 }
 
 .gradientvwire {

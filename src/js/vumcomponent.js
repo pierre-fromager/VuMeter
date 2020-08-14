@@ -13,11 +13,23 @@ var VumOvlDirClasses;
     VumOvlDirClasses["horiz"] = "vumoverlayh";
     VumOvlDirClasses["vert"] = "vumoverlayv";
 })(VumOvlDirClasses || (VumOvlDirClasses = {}));
+var VumGradients;
+(function (VumGradients) {
+    VumGradients["default"] = "default";
+    VumGradients["tron"] = "tron";
+})(VumGradients || (VumGradients = {}));
+var VumGradientClasses;
+(function (VumGradientClasses) {
+    VumGradientClasses["defaulth"] = "gradienthdefault";
+    VumGradientClasses["defaultv"] = "gradientvdefault";
+    VumGradientClasses["tronh"] = "gradienthtron";
+    VumGradientClasses["tronv"] = "gradientvtron";
+})(VumGradientClasses || (VumGradientClasses = {}));
 var VumAttrInputs;
 (function (VumAttrInputs) {
-    VumAttrInputs["direction"] = "data-direction";
-    VumAttrInputs["gradient"] = "data-gradient";
-    VumAttrInputs["mask"] = "data-mask";
+    VumAttrInputs["direction"] = "direction";
+    VumAttrInputs["gradient"] = "gradient";
+    VumAttrInputs["mask"] = "mask";
     VumAttrInputs["value"] = "value";
 })(VumAttrInputs || (VumAttrInputs = {}));
 var VumAttrInner;
@@ -38,7 +50,7 @@ class VuMeterComponent extends HTMLElement {
         this.debug = false;
     }
     static get observedAttributes() {
-        return ['data-direction', 'data-gradient', 'data-mask', 'value'];
+        return ['direction', 'gradient', 'mask', 'value'];
     }
     attributeChangedCallback(name, oldValue, newValue) {
         const msg = `changed from ${oldValue} to ${newValue}`;
@@ -80,8 +92,8 @@ class VuMeterComponent extends HTMLElement {
     }
     init() {
         this.isFirstChange = true;
-        this.vumClassname = 'vum';
-        this.overlayClassname = 'vumoverlay';
+        this.vumClass = 'vum';
+        this.overlayClass = 'vumoverlay';
     }
     build() {
         const shadow = this.attachShadow({ mode: 'open' });
@@ -96,12 +108,34 @@ class VuMeterComponent extends HTMLElement {
     get vpct() {
         return `${(100 - this.value)}%`;
     }
-    get overlayDirectionClassname() {
+    get overlayDirectionClass() {
         return (this.direction === VumDirections.horiz)
             ? VumOvlDirClasses.horiz
             : VumOvlDirClasses.vert;
     }
-    get vumDirectionClassname() {
+    get gradientClass() {
+        let gradientClass;
+        const isHoriz = this.direction === VumDirections.horiz;
+        switch (this.gradient) {
+            case VumGradients.default:
+                gradientClass = (isHoriz)
+                    ? VumGradientClasses.defaulth
+                    : VumGradientClasses.defaultv;
+                break;
+            case VumGradients.tron:
+                gradientClass = (isHoriz)
+                    ? VumGradientClasses.tronh
+                    : VumGradientClasses.tronv;
+                break;
+            default:
+                gradientClass = (isHoriz)
+                    ? VumGradientClasses.defaulth
+                    : VumGradientClasses.defaultv;
+                break;
+        }
+        return gradientClass;
+    }
+    get vumDirectionClass() {
         return (this.direction === VumDirections.horiz)
             ? VumDirClasses.horiz
             : VumDirClasses.vert;
@@ -111,7 +145,7 @@ class VuMeterComponent extends HTMLElement {
         this.applyVumeterChanges();
     }
     applyVumeterChanges() {
-        this.vumeterElt.setAttribute('class', `${this.vumClassname} ${this.vumDirectionClassname} ${this.gradient} ${this.mask}`);
+        this.vumeterElt.setAttribute('class', `${this.vumClass} ${this.vumDirectionClass} ${this.gradientClass} ${this.mask}`);
     }
     applyChanges() {
         this.applyVumeterChanges();
@@ -123,7 +157,7 @@ class VuMeterComponent extends HTMLElement {
         this.applyOverlayChanges();
     }
     applyOverlayChanges() {
-        this.overlayElt.setAttribute('class', `${this.overlayClassname} ${this.overlayDirectionClassname}`);
+        this.overlayElt.setAttribute('class', `${this.overlayClass} ${this.overlayDirectionClass}`);
         if (this.direction === VumDirections.horiz) {
             this.overlayElt.style.width = this.vpct;
         }
